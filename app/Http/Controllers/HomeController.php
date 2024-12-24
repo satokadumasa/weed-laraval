@@ -14,9 +14,11 @@ class HomeController extends Controller
     {
         \Log::debug("HomeController::index()");
         if (Auth::check()) {
+            \Log::debug("HomeController::index() CH-01");
             // ログイン済みのときの処理
             return view('home.index');
         } else {
+            \Log::debug("HomeController::index() CH-02");
             // ログインしていないときの処理
             return view('home.index2');
         }

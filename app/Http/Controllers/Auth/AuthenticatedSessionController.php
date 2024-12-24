@@ -16,6 +16,7 @@ class AuthenticatedSessionController extends Controller
      */
     public function create(): View
     {
+        \Log::debug("AuthenticatedSessionController::created()");
         return view('auth.login');
     }
 
@@ -24,6 +25,7 @@ class AuthenticatedSessionController extends Controller
      */
     public function store(LoginRequest $request): RedirectResponse
     {
+        \Log::debug("AuthenticatedSessionController::store()");
         $request->authenticate();
 
         $request->session()->regenerate();
@@ -36,6 +38,7 @@ class AuthenticatedSessionController extends Controller
      */
     public function destroy(Request $request): RedirectResponse
     {
+        \Log::debug("AuthenticatedSessionController::destroy()");
         Auth::guard('web')->logout();
 
         $request->session()->invalidate();

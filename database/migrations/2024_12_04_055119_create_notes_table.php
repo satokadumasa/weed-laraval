@@ -19,6 +19,8 @@ return new class extends Migration
             $table->text('detail');
             $table->timestamp('deleted_at')->nullable(true);
             $table->timestamps();
+
+            $table->index(['user_id', 'title']);
         });
     }
 
