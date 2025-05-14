@@ -17,7 +17,7 @@ class ProfileController extends Controller
         $user = $request->user();
         \Log::debug("ProfileController::show() user:" . print_r($user, true));
         return view('profile.show', [
-            'user' => $request->user(),
+            'user' => $user,
         ]);
     }
     /**
