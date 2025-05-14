@@ -14,19 +14,19 @@
                         <div class="offcanvas-body">
                             <ul class="navbar-nav">
                                 <li class="nav-item">
-                                    <a href="/dashboard">
+                                    <a href="/dashboard" class="btn btn-primary">
                                         {{ __('ダッシュボード') }}
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="/profile">
+                                    <a href="/profile" class="btn btn-primary">
                                         {{ __('プロファイル') }}
                                     </a>
                                 </li>
                                 <li class="nav-item">
                                     <form action="/logout" method="POST">
                                         @csrf
-                                        <buttoni class="btn btn-secondary">Logout</button>
+                                        <button class="btn btn-secondary">Logout</button>
                                     </form>
                                 </li>
                             </ul>
