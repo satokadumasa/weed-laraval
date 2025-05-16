@@ -32,6 +32,7 @@ class GetRssFeedCommand extends Command
         $desW = 60; //概要（本文）の文字数
         foreach ( $rss->item as $item ){
             $pub_date = strtotime( $item->pubDate ); // 更新日時
+            $pub_date = date('Y-m-d H:i:s', $pub_date);
             $description = $item->description; // 概要（本文）
             $imgurl = preg_match('/<img[^>]+src=[\'"]([^\'"]+)[\'"][^>]+\>/i', $description, $imgurls);//コンテンツからimgタグ無いのURLを抜き出す 
             $description = strip_tags($description);
@@ -43,7 +44,7 @@ class GetRssFeedCommand extends Command
                 'link' => $item->link,
                 'description' => $description,
                 'pub_date' => $pub_date,
-                'image' => $item->image->url,
+                'image' => (isset($item->image) && isset($item->image->url)) ? $item->image->url : '',
                 'img_url' => $imgurl,
                 'is_delete' => 0,
             ]);
