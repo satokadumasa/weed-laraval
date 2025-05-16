@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use App\Models\User;
+use App\Models\NewsSite;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -19,6 +20,14 @@ class DatabaseSeeder extends Seeder
             'name' => 'スサノオ',
             'email' => 'admin@example.com',
             'password' => 'password',
+        ]);
+
+        NersSite::factory()->create([
+            'name'      => 'Yahoo!ニュース・トピックス - 経済',
+            'url'       => 'https://news.yahoo.co.jp/rss/topics/business.xml',
+            'language'  => 'ja',
+            'copyright' => 'Yahoo!ニュース・トピックス - 経済',
+            'is_enable' => 1,
         ]);
     }
 }
