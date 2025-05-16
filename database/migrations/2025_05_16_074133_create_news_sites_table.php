@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('name', 255)->comment('サイト名');
             $table->string('url', 255)->comment('サイトURL');
             $table->string('language', 2)->comment('言語');
-            $table->string('copyright', 2)->comment('コピーライト');
+            $table->string('copyright', 255)->comment('コピーライト');
             $table->tinyInteger('is_enable')->nullable(true)->default(1)->comment('利用可');
             $table->timestamps();
         });

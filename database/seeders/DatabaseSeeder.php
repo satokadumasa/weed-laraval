@@ -16,13 +16,13 @@ class DatabaseSeeder extends Seeder
     {
         // User::factory(10)->create();
 
-        User::factory()->create([
-            'name' => 'スサノオ',
-            'email' => 'admin@example.com',
-            'password' => 'password',
-        ]);
+        // User::factory()->create([
+        //     'name' => 'スサノオ',
+        //     'email' => 'admin@example.com',
+        //     'password' => 'password',
+        // ]);
 
-        NersSite::factory()->create([
+        NewsSite::create([
             'name'      => 'Yahoo!ニュース・トピックス - 経済',
             'url'       => 'https://news.yahoo.co.jp/rss/topics/business.xml',
             'language'  => 'ja',
