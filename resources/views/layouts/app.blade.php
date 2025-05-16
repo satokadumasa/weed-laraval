@@ -13,14 +13,11 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
 </head>
 <body class="font-sans antialiased">
-    <div class="container">
-        <div class="row">
-            @include('layouts.navigation')
-            <!-- Page Content -->
-            <div class="container">
-                @yield('content')
-            </div>
-        </div>
+    <div class="container container-sm container-md container-lg container-xl container-xxl">
+@include('layouts.navigation')
+<!-- Page Content -->
+@yield('content')
+        <footer class="v-footer v-sheet theme--light v-footer--fixed" data-booted="true" style="left: 0px; right: 0px; bottom: 0px;position: fixed;background-color: whitesmoke;"><span>© 2025</span></footer>
     </div>
 </body>
 </html>

@@ -1,5 +1,9 @@
 @extends('layouts.app')
 @section('content')
-            <h2>index2</h2>
-            <a href="/login">LOGIN</a>
+            <h2>Home</h2>
+            <div class="row align-items-start">
+                <div class="col">
+
+                </div>
+            </div>
 @endsection
