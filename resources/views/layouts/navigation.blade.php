@@ -2,12 +2,12 @@
             <div class="navbar navbar-expand-lg bg-light">
                 <div class="container-fluid">
                     <div class="row">
-                        <div class="col">
+                        <div class="col-4 col-md-4 col-lg-3 col-xl-2 col-xxl-1">
                             <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas" aria-controls="offcanvas">
                                 <span class="navbar-toggler-icon"></span>
                             </button>
                         </div>
-                        <div class="col">
+                        <div class="col-8 col-md-8 col-lg-9 col-xl-10 col-xxl-11">
                             <a class="navbar-brand" href="/">{{ config('app.name', 'Laravel') }}</a>
                         </div>
                     </div>
