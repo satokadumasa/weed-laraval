@@ -34,17 +34,17 @@
                             0004
                         </div>
                     </div>
-                    <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4" style="height: 300px; background-color: whitesmoke; padding: 1px;">
+                    <div class="d-none d-sm-block col-md-6 col-lg-4 col-xl-4 col-xxl-4" style="height: 300px; background-color: whitesmoke; padding: 1px;">
                         <div style="height: 296px; margin: 1px; padding: 5px; background-color: white;">
                             0005
                         </div>
                     </div>
-                    <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4" style="height: 300px; background-color: whitesmoke; padding: 1px;">
+                    <div class="d-none d-sm-block col-md-6 col-lg-4 col-xl-4 col-xxl-4" style="height: 300px; background-color: whitesmoke; padding: 1px;">
                         <div style="height: 296px; margin: 1px; padding: 5px; background-color: white;">
                             0006
                         </div>
                     </div>
-                    <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4" style="height: 300px; background-color: whitesmoke; padding: 1px;">
+                    <div class="d-none d-sm-block col-md-6 col-lg-4 col-xl-4 col-xxl-4" style="height: 300px; background-color: whitesmoke; padding: 1px;">
                         <div style="height: 296px; margin: 1px; padding: 5px; background-color: white;">
                             0007
                         </div>
