@@ -3,15 +3,40 @@
             <main style="padding: 56px 0px 36px;">
                 <h2>Home</h2>
                 <div class="row">
-                    <div class="d-none d-sm-none d-dm-none d-lg-block col-lg-12 col-xl-12 col-xxl-12" style="height: 200px; background-color: whitesmoke; padding: 1px;">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 d col-xl-12 col-xxl-12 d-block d-sm-none" style="height: 200px; background-color: whitesmoke; padding: 1px;">
                         <div style="height: 196px; margin: 1px; padding: 5px; background-color: white;">
-                            LG
                             {{-- <img src="/img/header.png" class="img-fluid"> --}}
+                            XS
                         </div>
                     </div>
-                    <div class="col-12 col-sm-12 col-md-12 d-lg-block d-xl-block d-xxl-block" style="height: 200px; background-color: whitesmoke; padding: 1px;">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 d col-xl-12 col-xxl-12 d-none d-sm-block d-md-none" style="height: 200px; background-color: whitesmoke; padding: 1px;">
                         <div style="height: 196px; margin: 1px; padding: 5px; background-color: white;">
+                            {{-- <img src="/img/header.png" class="img-fluid"> --}}
                             SM
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 d col-xl-12 col-xxl-12 d-none d-md-block d-lg-none" style="height: 200px; background-color: whitesmoke; padding: 1px;">
+                        <div style="height: 196px; margin: 1px; padding: 5px; background-color: white;">
+                            {{-- <img src="/img/header.png" class="img-fluid"> --}}
+                            MD
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 d col-xl-12 col-xxl-12 d-none d-lg-block d-xl-none" style="height: 200px; background-color: whitesmoke; padding: 1px;">
+                        <div style="height: 196px; margin: 1px; padding: 5px; background-color: white;">
+                            {{-- <img src="/img/header.png" class="img-fluid"> --}}
+                            LG
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 d col-xl-12 col-xxl-12 d-none d-xl-block d-xxl-none" style="height: 200px; background-color: whitesmoke; padding: 1px;">
+                        <div style="height: 196px; margin: 1px; padding: 5px; background-color: white;">
+                            {{-- <img src="/img/header.png" class="img-fluid"> --}}
+                            XL
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 d col-xl-12 col-xxl-12 d-none d-xxl-block" style="height: 200px; background-color: whitesmoke; padding: 1px;">
+                        <div style="height: 196px; margin: 1px; padding: 5px; background-color: white;">
+                            {{-- <img src="/img/header.png" class="img-fluid"> --}}
+                            XXL
                         </div>
                     </div>
                     <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4" style="height: 300px; background-color: whitesmoke; padding: 1px;">
