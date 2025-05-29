@@ -39,45 +39,79 @@
                             XXL
                         </div>
                     </div>
-                    <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4" style="height: 300px; background-color: whitesmoke; padding: 1px;">
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-4 col-xxl-4" style="height: 320px; background-color: whitesmoke; padding: 1px;">
                         <div class="container">
                             <div class="row">
-                                <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12" style="height: 150px; background-color: whitesmoke; padding: 1px;">
-                                    <div style="height: 146px; margin: 1px; padding: 5px; background-color: white;">
-                                        運営からのお知らせ
+                                <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12" style="height: 160px; background-color: whitesmoke; padding: 1px;">
+                                    <div style="height: 156px; margin: 1px; padding: 5px; background-color: white;">
+                                        <b>運営からのお知らせ</b><br>
+                                        [010]<br> 
+                                        [010]<br> 
+                                        [010]<br> 
+                                        [010]<br> 
+                                        [010]<br> 
                                     </div>
                                 </div>
-                                <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12" style="height: 150px; background-color: whitesmoke; padding: 1px;">
-                                    <div style="height: 146px; margin: 1px; padding: 5px; background-color: white;">
-                                        Message
+                                <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12" style="height: 160px; background-color: whitesmoke; padding: 1px;">
+                                    <div style="height: 156px; margin: 1px; padding: 5px; background-color: white;">
+                                        <b>Message</b><br>
+                                        [010]<br> 
+                                        [010]<br> 
+                                        [010]<br> 
+                                        [010]<br> 
+                                        [010]<br> 
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4" style="height: 300px; background-color: whitesmoke; padding: 1px;">
-                        <div style="height: 296px; margin: 1px; padding: 5px; background-color: white;">
-                            新着
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-4 col-xxl-4" style="height: 320px; background-color: whitesmoke; padding: 1px;">
+                        <div style="height: 316px; margin: 1px; padding: 5px; background-color: white;">
+                            <b>フォロー新着</b><br>
+                            [010]<br> 
+                            [010]<br> 
+                            [010]<br> 
+                            [010]<br> 
+                            [010]<br> 
                         </div>
                     </div>
-                    <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4" style="height: 300px; background-color: whitesmoke; padding: 1px;">
-                        <div style="height: 296px; margin: 1px; padding: 5px; background-color: white;">
-                            0004
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-4 col-xxl-4" style="height: 320px; background-color: whitesmoke; padding: 1px;">
+                        <div style="height: 316px; margin: 1px; padding: 5px; background-color: white;">
+                            <b>全体新着</b><br>
+                            [010]<br> 
+                            [010]<br> 
+                            [010]<br> 
+                            [010]<br> 
+                            [010]<br> 
                         </div>
                     </div>
-                    <div class="col-12 col-sm-12 col-md-6 col-md-6 col-lg-4 col-xl-4 col-xxl-4" style="height: 300px; background-color: whitesmoke; padding: 1px;">
-                        <div style="height: 296px; margin: 1px; padding: 5px; background-color: white;">
-                            0005
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-4 col-xxl-4" style="height: 320px; background-color: whitesmoke; padding: 1px;">
+                        <div style="height: 316px; margin: 1px; padding: 5px; background-color: white;">
+                            <b>全体新着</b><br>
+                            [010]<br> 
+                            [010]<br> 
+                            [010]<br> 
+                            [010]<br> 
+                            [010]<br> 
                         </div>
                     </div>
-                    <div class="d-none d-sm-none d-dm-none d-lg-block col-lg-4 col-xl-4 col-xxl-4" style="height: 300px; background-color: whitesmoke; padding: 1px;">
-                        <div style="height: 296px; margin: 1px; padding: 5px; background-color: white;">
-                            0006
+                    <div class="d-none d-sm-none d-dm-none d-lg-block col-lg-6 col-xl-4 col-xxl-4" style="height: 320px; background-color: whitesmoke; padding: 1px;">
+                        <div style="height: 316px; margin: 1px; padding: 5px; background-color: white;">
+                            <b>全体新着</b><br>
+                            [010]<br> 
+                            [010]<br> 
+                            [010]<br> 
+                            [010]<br> 
                         </div>
                     </div>
-                    <div class="d-none d-sm-none d-dm-none d-lg-block col-lg-4 col-xl-4 col-xxl-4" style="height: 300px; background-color: whitesmoke; padding: 1px;">
-                        <div style="height: 296px; margin: 1px; padding: 5px; background-color: white;">
-                            0007
+                    <div class="d-none d-sm-none d-dm-none d-lg-block col-lg-6 col-xl-4 col-xxl-4" style="height: 320px; background-color: whitesmoke; padding: 1px;">
+                        <div style="height: 316px; margin: 1px; padding: 5px; background-color: white;">
+                            <b>全体新着</b><br>
+                            [010]<br> 
+                            [010]<br> 
+                            [010]<br> 
+                            [010]<br> 
+                            [010]<br> 
                         </div>
                     </div>
                 </div>
