@@ -1,52 +1,75 @@
-<x-guest-layout>
-    <form method="POST" action="{{ route('register') }}">
-        @csrf
+<!DOCTYPE html>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        <!-- Name -->
-        <div>
-            <x-input-label for="name" :value="__('Name')" />
-            <x-text-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus autocomplete="name" />
-            <x-input-error :messages="$errors->get('name')" class="mt-2" />
-        </div>
+    <title>{{ config('app.name', 'Laravel') }}</title>
 
-        <!-- Email Address -->
-        <div class="mt-4">
-            <x-input-label for="email" :value="__('Email')" />
-            <x-text-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autocomplete="username" />
-            <x-input-error :messages="$errors->get('email')" class="mt-2" />
-        </div>
-
-        <!-- Password -->
-        <div class="mt-4">
-            <x-input-label for="password" :value="__('Password')" />
-
-            <x-text-input id="password" class="block mt-1 w-full"
-                            type="password"
-                            name="password"
-                            required autocomplete="new-password" />
-
-            <x-input-error :messages="$errors->get('password')" class="mt-2" />
-        </div>
-
-        <!-- Confirm Password -->
-        <div class="mt-4">
-            <x-input-label for="password_confirmation" :value="__('Confirm Password')" />
-
-            <x-text-input id="password_confirmation" class="block mt-1 w-full"
-                            type="password"
-                            name="password_confirmation" required autocomplete="new-password" />
-
-            <x-input-error :messages="$errors->get('password_confirmation')" class="mt-2" />
-        </div>
-
-        <div class="flex items-center justify-end mt-4">
-            <a class="underline text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 dark:focus:ring-offset-gray-800" href="{{ route('login') }}">
-                {{ __('Already registered?') }}
-            </a>
-
-            <x-primary-button class="ms-4">
-                {{ __('Register') }}
-            </x-primary-button>
-        </div>
-    </form>
-</x-guest-layout>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+</head>
+<body class="font-sans antialiased">
+    <div class="container container-sm container-md container-lg container-xl container-xxl">
+        @include('layouts.navigation')
+        <main style="padding: 56px 0px 36px;">
+            <h2>Sign Up</h2>
+            <!-- Page Content -->
+            <form method="POST" action="{{ route('register') }}">
+            @csrf
+            <div class="row align-items-start">
+                <div class="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3 col-xxl-3" style="padding: 2px;">
+                    <label class="block font-medium text-sm text-gray-700 dark:text-gray-300" for="name">
+                        Name
+                    </label>
+                </div>
+                <div class="col-9 col-sm-9 col-md-3 col-lg-3 col-xl-3 col-xxl-9" style="padding: 2px;">
+                    <input type="name" name="name" id="name" value="" style="width: 250px;">
+                </div>
+            </div>
+            <div class="row align-items-start">
+                <div class="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3 col-xxl-3" style="padding: 2px;">
+                    <label class="block font-medium text-sm text-gray-700 dark:text-gray-300" for="email">
+                        Email
+                    </label>
+                </div>
+                <div class="col-9 col-sm-9 col-md-3 col-lg-3 col-xl-3 col-xxl-9" style="padding: 2px;">
+                    <input type="text" name="email" id="email" value="" style="width: 250px;">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3 col-xxl-3" style="padding: 2px;">
+                    <label class="block font-medium text-sm text-gray-700 dark:text-gray-300" for="password">
+                        Password
+                    </label>
+                </div>
+                <div class="col-9 col-sm-9 col-md-3 col-lg-3 col-xl-3 col-xxl-9" style="padding: 2px;">
+                    <input type="password" name="password" id="password" value="" style="width: 250px;">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3 col-xxl-3" style="padding: 2px;">
+                    <label class="block font-medium text-sm text-gray-700 dark:text-gray-300" for="password_confirmation">
+                        Password
+                    </label>
+                </div>
+                <div class="col-9 col-sm-9 col-md-3 col-lg-3 col-xl-3 col-xxl-9" style="padding: 2px;">
+                    <input type="password" name="password_confirmation" id="password_confirmation" value="" style="width: 250px;">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12" style="padding: 2px;">
+                    <button class="btn btn-primary">
+                        {{ __('Regist') }}
+                    </button>
+                </div>
+            </div>
+            </form>
+        </main>
+    </div>
+    <footer class="v-footer v-sheet theme--light v-footer--fixed" data-booted="true" style="left: 0px; right: 0px; bottom: 0px;position: fixed;"><span>© 2025</span></footer>
+</body>
+</html>

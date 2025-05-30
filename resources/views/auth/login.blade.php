@@ -50,9 +50,19 @@
             </div>
             <div class="row">
                 <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12" style="padding: 2px;">
+                    @if (Route::has('register'))
+                    <br>
+                    <a class="" href="/register">
+                        {{ __('Regist') }}
+                    </a>
+                    @endif
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12" style="padding: 2px;">
                     @if (Route::has('password.request'))
                     <br>
-                    <a class="" href="/password/request">
+                    <a class="" href="/forgot-password">
                         {{ __('Forgot your password?') }}
                     </a>
                     @endif
@@ -67,7 +77,7 @@
             </div>
             </form>
         </main>
-    </div>        <footer class="v-footer v-sheet theme--light v-footer--fixed" data-booted="true" style="left: 0px; right: 0px; bottom: 0px;position: fixed;"><span>© 2025</span></footer>
-
+    </div>
+    <footer class="v-footer v-sheet theme--light v-footer--fixed" data-booted="true" style="left: 0px; right: 0px; bottom: 0px;position: fixed;"><span>© 2025</span></footer>
 </body>
 </html>

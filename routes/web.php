@@ -13,7 +13,7 @@ require __DIR__.'/auth.php';
 Route::middleware('guest')->group(function () {
 });
 
-Route::get('/',  [HomeController::class, 'index'])->name('profile.show');
+Route::get('/',  [HomeController::class, 'index'])->name('index');
 
 Route::middleware('auth')->group(function () {
     Route::get('/dashboard', [HomeController::class, 'index'])->middleware(['auth', 'verified'])->name('dashboard');
