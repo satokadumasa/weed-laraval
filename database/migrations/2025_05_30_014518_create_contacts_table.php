@@ -11,16 +11,15 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('page_comments', function (Blueprint $table) {
+        Schema::create('contacts', function (Blueprint $table) {
             $table->id();
-            $table->integer('page_id')->index();
             $table->integer('user_id')->index();
-            $table->string('title')->index();
-            $table->text('detail');
+            $table->string('hash')->index();
+            $table->string('name')->index();
+            $table->string('url');
+            $table->text('description');
             $table->timestamp('deleted_at')->nullable(true);
             $table->timestamps();
-
-            $table->index(['page_id', 'user_id', 'title']);
         });
     }
 
@@ -29,6 +28,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('page_comments');
+        Schema::dropIfExists('contacts');
     }
 };

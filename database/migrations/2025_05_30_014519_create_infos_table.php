@@ -11,17 +11,14 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('pages', function (Blueprint $table) {
+        Schema::create('infos', function (Blueprint $table) {
             $table->id();
-            $table->integer('note_id')->index();
             $table->integer('user_id')->index();
+            $table->string('hash')->index();
             $table->string('title')->index();
-            $table->text('outline');
-            $table->text('detail');
+            $table->text('body');
             $table->timestamp('deleted_at')->nullable(true);
             $table->timestamps();
-
-            $table->index(['note_id', 'user_id', 'title']);
         });
     }
 
@@ -30,6 +27,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('pages');
+        Schema::dropIfExists('infos');
     }
 };
