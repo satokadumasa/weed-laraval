@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use SimpleSoftwareIO\QrCode\Facades\QrCode;
 
 class HomeController extends Controller
 {
@@ -12,15 +13,17 @@ class HomeController extends Controller
      */
     public function index()
     {
+        $id = 10;
+
         \Log::debug("HomeController::index()");
         if (Auth::check()) {
             \Log::debug("HomeController::index() CH-01");
             // ログイン済みのときの処理
-            return view('home.index');
+            return view('home.index', compact('id'));
         } else {
             \Log::debug("HomeController::index() CH-02");
             // ログインしていないときの処理
-            return view('home.index2');
+            return view('home.index2', compact('id'));
         }
     }
 
