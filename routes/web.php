@@ -1,6 +1,6 @@
 <?php
-
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\QrCodeController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -14,6 +14,7 @@ Route::middleware('guest')->group(function () {
 });
 
 Route::get('/',  [HomeController::class, 'index'])->name('index');
+Route::get('/qr-code/show/{hash}',  [QrCodeController::class, 'show'])->name('qr-code.show');
 
 Route::middleware('auth')->group(function () {
     Route::get('/dashboard', [HomeController::class, 'index'])->middleware(['auth', 'verified'])->name('dashboard');
