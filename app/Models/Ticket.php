@@ -10,6 +10,8 @@ class Ticket extends Model
         'hash',
         'ticket_code',
         'badge_name',
+        'first_name',
+        'family_name',
         'age',
         'gender',
         'email',
@@ -20,4 +22,12 @@ class Ticket extends Model
         'room_number',
         'description',
     ];
+    public function status()
+    {
+        return $this->hasMany(Status::class, 'id', 'status_id');
+    }
+    public function pref()
+    {
+        return $this->hasMany(Pref::class, 'id', 'pref_id');
+    }
 }

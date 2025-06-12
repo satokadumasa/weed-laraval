@@ -16,6 +16,9 @@ return new class extends Migration
             $table->string('hash')->index();
             $table->string('ticket_code', 7)->index();
             $table->string('badge_name', 128)->index();
+            $table->string('first_name', 128)->index();
+            $table->string('family_name', 128)->index();
+            $table->integer('status_id')->default(1);
             $table->integer('age');
             $table->integer('gender');
             $table->string('email', 128)->index();

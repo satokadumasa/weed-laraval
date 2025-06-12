@@ -13,11 +13,8 @@ class QrCodeController extends Controller
     }
     public function show(string $hash)
     {
-        \Log::debug("QrCodeController::show() ");
-        $ticket = Ticket::Where('hash', $hash)->first();
-        \Log::debug("QrCodeController::show() ticket:" . print_r($ticket, true));
-        $data = [
-
-        ];
+        \Log::debug("QrCodeController::show() hash[{$hash}]");
+        $url = config("app.url") . "/ticket/show/{$hash}";
+        return view('qr-code.show', compact('url'));
     }
 }
