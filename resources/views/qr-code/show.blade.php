@@ -23,8 +23,8 @@
                         <b>連絡事項</b><br>
                         <div class="container">
                             <div class="row">
-                                <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12" style="height: 160px; background-color: whitesmoke; padding: 1px;">
-                                    <div style="height: 156px; margin: 1px; padding: 5px; background-color: white;text-align: center;">
+                                <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12" style="height: 300px; background-color: whitesmoke; padding: 1px;">
+                                    <div style="height: 296px; margin: 1px; padding: 5px; background-color: white;text-align: center;">
                                         連絡事項連絡事項連絡事項連絡事項連絡事項連絡事項連絡事項連絡事項連絡事項連絡事項連絡事項連絡事項連絡事項連絡事項連絡事項連絡事項連絡事項連絡事項連絡事項
                                     </div>
                                 </div>
