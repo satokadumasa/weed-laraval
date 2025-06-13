@@ -20,6 +20,8 @@ class Ticket extends Model
         'address',
         'building_name',
         'room_number',
+        'phone_number',
+        'mpbile_number',
         'description',
     ];
     public function status()

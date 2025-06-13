@@ -27,6 +27,8 @@ return new class extends Migration
             $table->string('address', 128)->index();
             $table->string('building_name', 128)->nullable(true)->index();
             $table->string('room_number', 5)->nullable(true)->index();
+            $table->string('phone_number', 13)->nullable(true)->index();
+            $table->string('mpbile_number', 13)->nullable(true)->index();
             $table->text('description');
             $table->timestamps();
         });

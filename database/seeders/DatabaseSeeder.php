@@ -46,6 +46,8 @@ class DatabaseSeeder extends Seeder
             'address'        => '松戸市上本郷',
             'building_name'  => '',
             'room_number'    => '',
+            'phone_number'   => '043-251-1278',
+            'mpbile_number'  => '080-6644-2246',
             'description'    => '',
         ]);
 
@@ -63,6 +65,8 @@ class DatabaseSeeder extends Seeder
             'address'        => '松戸市上本郷',
             'building_name'  => '',
             'room_number'    => '',
+            'phone_number'   => '043-251-1278',
+            'mpbile_number'  => '080-6644-2246',
             'description'    => '',
         ]);
 
@@ -80,6 +84,8 @@ class DatabaseSeeder extends Seeder
             'address'        => '松戸市上本郷',
             'building_name'  => '',
             'room_number'    => '',
+            'phone_number'   => '043-251-1278',
+            'mpbile_number'  => '080-6644-2246',
             'description'    => '',
         ]);
 
@@ -97,6 +103,8 @@ class DatabaseSeeder extends Seeder
             'address'        => '松戸市上本郷',
             'building_name'  => '',
             'room_number'    => '',
+            'phone_number'   => '043-251-1278',
+            'mpbile_number'  => '080-6644-2246',
             'description'    => '',
         ]);
 
@@ -114,6 +122,8 @@ class DatabaseSeeder extends Seeder
             'address'        => '松戸市上本郷',
             'building_name'  => '',
             'room_number'    => '',
+            'phone_number'   => '043-251-1278',
+            'mpbile_number'  => '080-6644-2246',
             'description'    => '',
         ]);
 
@@ -131,6 +141,8 @@ class DatabaseSeeder extends Seeder
             'address'        => '松戸市上本郷',
             'building_name'  => '',
             'room_number'    => '',
+            'phone_number'   => '043-251-1278',
+            'mpbile_number'  => '080-6644-2246',
             'description'    => '',
         ]);
 
@@ -148,6 +160,8 @@ class DatabaseSeeder extends Seeder
             'address'        => '松戸市上本郷',
             'building_name'  => '',
             'room_number'    => '',
+            'phone_number'   => '043-251-1278',
+            'mpbile_number'  => '080-6644-2246',
             'description'    => '',
         ]);
 
@@ -165,6 +179,8 @@ class DatabaseSeeder extends Seeder
             'address'        => '松戸市上本郷',
             'building_name'  => '',
             'room_number'    => '',
+            'phone_number'   => '043-251-1278',
+            'mpbile_number'  => '080-6644-2246',
             'description'    => '',
         ]);
 
@@ -182,6 +198,8 @@ class DatabaseSeeder extends Seeder
             'address'        => '松戸市上本郷',
             'building_name'  => '',
             'room_number'    => '',
+            'phone_number'   => '043-251-1278',
+            'mpbile_number'  => '080-6644-2246',
             'description'    => '',
         ]);
 
@@ -199,6 +217,8 @@ class DatabaseSeeder extends Seeder
             'address'        => '松戸市上本郷',
             'building_name'  => '',
             'room_number'    => '',
+            'phone_number'   => '043-251-1278',
+            'mpbile_number'  => '080-6644-2246',
             'description'    => '',
         ]);
 
