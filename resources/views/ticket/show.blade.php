@@ -46,7 +46,6 @@
                     var org_status_id = {{ $ticket->status_id }};
                     var status_id = $('#status_id').val();
                     var token = $('input[name="_token"]').val();
-                    alert(`update_status() hash[${hash}] status_id[${status_id}]`);
                     $.ajax({
                         url:'/ticket/update',
                         headers: {
