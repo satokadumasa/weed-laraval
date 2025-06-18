@@ -61,18 +61,27 @@ class TicketController extends Controller
     public function import(Request $request)
     {
         $params = $request->all();
-        \Log::debug("TicketController::import() params:" . print_r($params, true));
-        if ($request->hasFile('csvFile')) {
+        \Log::debug("TicketController::store() params:" . print_r($params, true));
+        return view('ticket.import');
+    }
+
+    public function store(Request $request)
+    {
+        $params = $request->all();
+        \Log::debug("TicketController::store() params:" . print_r($params, true));
+        if ($request->hasFile('csv_file')) {
             //拡張子がCSVであるかの確認
-            if ($request->csv_file->getClientOriginalExtension() !== "csv") {
+            if ($request->file('csv_file')->getClientOriginalExtension() !== "csv") {
                 throw new Exception('不適切な拡張子です。');
             }
             //ファイルの保存
             $newCsvFileName = $request->csv_file->getClientOriginalName();
-            $request->csv_file->storeAs('storage/', $newCsvFileName);
+            \Log::debug("TicketController::store() newCsvFileName[{$newCsvFileName}]");
+            $request->file('csv_file')->storeAs('storage/', $newCsvFileName);
         } else {
             throw new Exception('CSVファイルの取得に失敗しました。');
         }
-
+        // return redirect()->action('TicketController::import');
+        return redirect()->route('ticket.import');
     }
 }

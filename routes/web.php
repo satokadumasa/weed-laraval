@@ -25,7 +25,6 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
     Route::get('/ticket',  [TicketController::class, 'index'])->name('ticket.index');
     Route::get('/ticket/show/{hash}',  [TicketController::class, 'show'])->name('ticket.show');
-    // Route::post('/ticket/update',  [TicketController::class, 'update'])->name('ticket.update');
     Route::get('/ticket/import',  [TicketController::class, 'import'])->name('ticket.import');
-    Route::post('/ticket/import',  [TicketController::class, 'import'])->name('ticket.import');
+    Route::post('/ticket/store',  [TicketController::class, 'store'])->name('ticket.store');
 });
