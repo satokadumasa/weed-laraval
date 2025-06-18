@@ -47,7 +47,7 @@ class DatabaseSeeder extends Seeder
             'building_name'  => '',
             'room_number'    => '',
             'phone_number'   => '043-251-1278',
-            'mpbile_number'  => '080-6644-2246',
+            'mobile_number'  => '080-6644-2246',
             'description'    => '',
         ]);
 
@@ -66,7 +66,7 @@ class DatabaseSeeder extends Seeder
             'building_name'  => '',
             'room_number'    => '',
             'phone_number'   => '043-251-1278',
-            'mpbile_number'  => '080-6644-2246',
+            'mobile_number'  => '080-6644-2246',
             'description'    => '',
         ]);
 
@@ -85,7 +85,7 @@ class DatabaseSeeder extends Seeder
             'building_name'  => '',
             'room_number'    => '',
             'phone_number'   => '043-251-1278',
-            'mpbile_number'  => '080-6644-2246',
+            'mobile_number'  => '080-6644-2246',
             'description'    => '',
         ]);
 
@@ -104,7 +104,7 @@ class DatabaseSeeder extends Seeder
             'building_name'  => '',
             'room_number'    => '',
             'phone_number'   => '043-251-1278',
-            'mpbile_number'  => '080-6644-2246',
+            'mobile_number'  => '080-6644-2246',
             'description'    => '',
         ]);
 
@@ -123,7 +123,7 @@ class DatabaseSeeder extends Seeder
             'building_name'  => '',
             'room_number'    => '',
             'phone_number'   => '043-251-1278',
-            'mpbile_number'  => '080-6644-2246',
+            'mobile_number'  => '080-6644-2246',
             'description'    => '',
         ]);
 
@@ -142,7 +142,7 @@ class DatabaseSeeder extends Seeder
             'building_name'  => '',
             'room_number'    => '',
             'phone_number'   => '043-251-1278',
-            'mpbile_number'  => '080-6644-2246',
+            'mobile_number'  => '080-6644-2246',
             'description'    => '',
         ]);
 
@@ -161,7 +161,7 @@ class DatabaseSeeder extends Seeder
             'building_name'  => '',
             'room_number'    => '',
             'phone_number'   => '043-251-1278',
-            'mpbile_number'  => '080-6644-2246',
+            'mobile_number'  => '080-6644-2246',
             'description'    => '',
         ]);
 
@@ -180,7 +180,7 @@ class DatabaseSeeder extends Seeder
             'building_name'  => '',
             'room_number'    => '',
             'phone_number'   => '043-251-1278',
-            'mpbile_number'  => '080-6644-2246',
+            'mobile_number'  => '080-6644-2246',
             'description'    => '',
         ]);
 
@@ -199,7 +199,7 @@ class DatabaseSeeder extends Seeder
             'building_name'  => '',
             'room_number'    => '',
             'phone_number'   => '043-251-1278',
-            'mpbile_number'  => '080-6644-2246',
+            'mobile_number'  => '080-6644-2246',
             'description'    => '',
         ]);
 
@@ -218,7 +218,7 @@ class DatabaseSeeder extends Seeder
             'building_name'  => '',
             'room_number'    => '',
             'phone_number'   => '043-251-1278',
-            'mpbile_number'  => '080-6644-2246',
+            'mobile_number'  => '080-6644-2246',
             'description'    => '',
         ]);
 

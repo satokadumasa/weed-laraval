@@ -13,6 +13,8 @@
                     </div>
                     <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-4 col-xxl-4" style="height: 320px; background-color: whitesmoke; padding: 1px;">
                         <div style="height: 316px; margin: 1px; padding: 5px; background-color: white;">
+                            <div class="row">
+                                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-4 col-xxl-4" style="height: 320px; background-color: whitesmoke; padding: 1px;">
                             <b>参加者情報</b><br>
                             チケットコード：{{ $ticket->ticket_code }}<br>
                             バッジネーム：{{ $ticket->badge_name }}<br>
@@ -33,6 +35,8 @@
                             電話番号：{{ $ticket->phone_number }}<br>
                             携帯番号：{{ $ticket->mpbile_number }}<br>
                             @csrf
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-4 col-xxl-4" style="height: 320px; background-color: whitesmoke; padding: 1px;">
