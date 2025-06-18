@@ -19,9 +19,13 @@ class TicketController extends Controller
 
         $query = Ticket::with('status','pref');
         foreach($params AS $key => $value) {
-            if($key == 'page') continue;
             if(!isset($value) || empty($value)) continue;
-            $query = $query->where($key, '=', $value);
+            if($key == 'page') continue;
+            if(in_array($key, ['address', 'building_name', 'badge_name'])) {
+                $query = $query->where($key, 'LIKE', "%{$value}%");
+            } else {
+                $query = $query->where($key, '=', $value);
+            }
         }
         $tickets = $query->orderBy('id')->paginate(5)->fragment('tickets');
 
@@ -52,5 +56,23 @@ class TicketController extends Controller
                 'message' => 'success',
                 'status' => 200
             ]]);
+    }
+
+    public function import(Request $request)
+    {
+        $params = $request->all();
+        \Log::debug("TicketController::import() params:" . print_r($params, true));
+        if ($request->hasFile('csvFile')) {
+            //拡張子がCSVであるかの確認
+            if ($request->csv_file->getClientOriginalExtension() !== "csv") {
+                throw new Exception('不適切な拡張子です。');
+            }
+            //ファイルの保存
+            $newCsvFileName = $request->csv_file->getClientOriginalName();
+            $request->csv_file->storeAs('storage/', $newCsvFileName);
+        } else {
+            throw new Exception('CSVファイルの取得に失敗しました。');
+        }
+
     }
 }
