@@ -98,6 +98,7 @@
                             <input type="submit" value="Search">
                         </div>
                         <div class="col-10 col-sm-10 col-md-10 col-lg-10 col-xl-10 col-xxl-10">
+                            <a href="{{ config("app.url") }}/ticket/import">IMPORT</a>
                         </div>
                     </div>
                 </div>

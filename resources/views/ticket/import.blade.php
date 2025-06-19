@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('content')
             <main style="padding: 56px 0px 36px;">
-                <h2>TICKET INFOMATION LIST</h2>
+                <h2>TICKET DATA IMPORT</h2>
                 <form action="{{ config("app.url") }}/ticket/store" method="post" enctype="multipart/form-data">
                 @csrf
                 <div class="container">
@@ -18,6 +18,7 @@
                             <input type="submit" value="Regist">
                         </div>
                         <div class="col-10 col-sm-10 col-md-10 col-lg-10 col-xl-10 col-xxl-10">
+                            <a href="{{ config("app.url") }}/ticket/">TICKET LIST</a>
                         </div>
                     </div>
                 </div>

@@ -5,7 +5,7 @@ use Illuminate\Http\Request;
 use App\Models\Ticket;
 use App\Models\Status;
 use App\Models\Pref;
-
+use App\Services\TicketService;
 class TicketController extends Controller
 {
     public function index(Request $request)
@@ -35,10 +35,12 @@ class TicketController extends Controller
     public function show(string $hash)
     {
         \Log::debug("TicketController::show() ");
-        $ticket = Ticket::with(['status', 'pref'])->Where('hash', $hash)->first();
+        $ticket = Ticket::with(['status', 'pref'])->Where('hash', '=', $hash)->first();
         $statuses = Status::all();
         \Log::debug("TicketController::show() statuses:" . print_r($statuses, true));
-        $url = config("app.url") . "/ticket/show/{$hash}";
+        \Log::debug("TicketController::show() [{$ticket->hash}]");
+        $url = config("app.url") . "/ticket/show/{$ticket->hash}";
+        \Log::debug("TicketController::show() url[{$url}]");
         return view('ticket.show', compact('ticket', 'statuses','url'));
     }
 
@@ -67,21 +69,8 @@ class TicketController extends Controller
 
     public function store(Request $request)
     {
-        $params = $request->all();
-        \Log::debug("TicketController::store() params:" . print_r($params, true));
-        if ($request->hasFile('csv_file')) {
-            //拡張子がCSVであるかの確認
-            if ($request->file('csv_file')->getClientOriginalExtension() !== "csv") {
-                throw new Exception('不適切な拡張子です。');
-            }
-            //ファイルの保存
-            $newCsvFileName = $request->csv_file->getClientOriginalName();
-            \Log::debug("TicketController::store() newCsvFileName[{$newCsvFileName}]");
-            $request->file('csv_file')->storeAs('storage/', $newCsvFileName);
-        } else {
-            throw new Exception('CSVファイルの取得に失敗しました。');
-        }
-        // return redirect()->action('TicketController::import');
-        return redirect()->route('ticket.import');
+        \Log::debug("TicketController::store() START");
+        TicketService::importTicketData($request);
+        return redirect()->route('ticket.index');
     }
 }
