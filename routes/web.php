@@ -27,4 +27,5 @@ Route::middleware('auth')->group(function () {
     Route::get('/ticket/show/{hash}',  [TicketController::class, 'show'])->name('ticket.show');
     Route::get('/ticket/import',  [TicketController::class, 'import'])->name('ticket.import');
     Route::post('/ticket/store',  [TicketController::class, 'store'])->name('ticket.store');
+    Route::post('/ticket/update',  [TicketController::class, 'update'])->name('ticket.update');
 });

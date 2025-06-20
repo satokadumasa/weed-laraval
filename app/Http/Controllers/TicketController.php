@@ -2,16 +2,18 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use App\Models\Ticket;
 use App\Models\Status;
 use App\Models\Pref;
 use App\Services\TicketService;
+
 class TicketController extends Controller
 {
     public function index(Request $request)
     {
+        \Log::debug("TicketController::index() START");
         $params = $request->all();
-        \Log::debug("TicketController::index() params:" . print_r($params, true));
         $tickets = null;
 
         $statuses = Status::all();
@@ -21,7 +23,7 @@ class TicketController extends Controller
         foreach($params AS $key => $value) {
             if(!isset($value) || empty($value)) continue;
             if($key == 'page') continue;
-            if(in_array($key, ['address', 'building_name', 'badge_name'])) {
+            if(in_array($key, ['first_name', 'family_name', 'address', 'building_name', 'badge_name'])) {
                 $query = $query->where($key, 'LIKE', "%{$value}%");
             } else {
                 $query = $query->where($key, '=', $value);
@@ -37,33 +39,41 @@ class TicketController extends Controller
         \Log::debug("TicketController::show() ");
         $ticket = Ticket::with(['status', 'pref'])->Where('hash', '=', $hash)->first();
         $statuses = Status::all();
-        \Log::debug("TicketController::show() statuses:" . print_r($statuses, true));
-        \Log::debug("TicketController::show() [{$ticket->hash}]");
         $url = config("app.url") . "/ticket/show/{$ticket->hash}";
-        \Log::debug("TicketController::show() url[{$url}]");
         return view('ticket.show', compact('ticket', 'statuses','url'));
     }
 
     public function update(Request $request)
     {
-        $params = $request->all();
-        \Log::debug("TicketController::update() params:" . print_r($params, true));
-        $ticket = Ticket::Where('hash', $params['hash'])->first();
-        \Log::debug("TicketController::update() ticket:" . print_r($ticket, true));
-        $ticket->status_id = $params['status_id'];
-        $ticket->save();
+        \Log::debug("TicketController::update() START");
+        DB::beginTransaction();
+        try {
+            $params = $request->all();
+            \Log::debug("TicketController::update() params:" . print_r($params, true));
+            $ticket = Ticket::Where('hash', $params['hash'])->first();
+            $ticket->status_id = $params['status_id'];
+            $ticket->save();
+            DB::commit(); 
 
-        return response()->json([
-            'data' => [
-                'message' => 'success',
-                'status' => 200
-            ]]);
+            return response()->json([
+                'data' => [
+                    'message' => 'success',
+                    'status' => 200
+                ]]);
+        } catch (\Throwable $th) {
+            DB::rollBack(); 
+            return response()->json([
+                'data' => [
+                    'message' => 'false',
+                    'status' => 200
+                ]]);
+        }
     }
 
     public function import(Request $request)
     {
+        \Log::debug("TicketController::import() START");
         $params = $request->all();
-        \Log::debug("TicketController::store() params:" . print_r($params, true));
         return view('ticket.import');
     }
 
