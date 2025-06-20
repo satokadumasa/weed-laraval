@@ -23,5 +23,6 @@
                     </div>
                 </div>
                 </form>
+                [<a href="{{ config("app.url") }}/ticket/">INDEX</a>]
             </main>
 @endsection

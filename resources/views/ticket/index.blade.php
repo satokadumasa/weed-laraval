@@ -1,5 +1,6 @@
 @extends('layouts.app')
 @section('content')
+            <script src="https://cdn.jsdelivr.net/npm/jsqr@1.4.0/dist/jsQR.min.js">
             <main style="padding: 56px 0px 36px;">
                 <h2>TICKET INFOMATION LIST</h2>
                 <form action="{{ config("app.url") }}/ticket/" method="get">

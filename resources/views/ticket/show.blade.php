@@ -52,6 +52,7 @@
                         </div>
                     </div>
                 </div>
+                [<a href="{{ config("app.url") }}/ticket/">INDEX</a>]
             </main>
             <script>
                 function update_status(hash) {
