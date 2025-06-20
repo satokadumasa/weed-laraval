@@ -83,4 +83,9 @@ class TicketController extends Controller
         TicketService::importTicketData($request);
         return redirect()->route('ticket.index');
     }
+
+    public function qr_read()
+    {
+        return view('ticket.qr_read');
+    }
 }

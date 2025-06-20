@@ -13,13 +13,34 @@
                     </div>
                     <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-4 col-xxl-4" style="height: 320px; background-color: whitesmoke; padding: 1px;">
                         <div style="height: 316px; margin: 1px; padding: 5px; background-color: white;">
-                            <div class="row">
-                                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-4 col-xxl-4" style="height: 320px; background-color: whitesmoke; padding: 1px;">
-                                    <b>参加者情報</b><br>
-                                    チケットコード：{{ $ticket->ticket_code }}<br>
-                                    バッジネーム：{{ $ticket->badge_name }}<br>
-                                    本名：{{ $ticket->family_name }} {{ $ticket->first_name }}<br>
-                                    ステータス：
+                            @csrf
+                            <div class="container">
+                                <div class="row" style="background-color: whitesmoke;">
+                                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12" style="height: 20px; background-color: whitesmoke; padding: 1px;">
+                                        <b>参加者情報</b>
+                                    </div>
+                                    <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4" style="height: 20px; background-color: whitesmoke; padding: 1px;">
+                                        チケットコード
+                                    </div>
+                                    <div class="col-12 col-sm-12 col-md-4 col-lg-8 col-xl-8 col-xxl-8" style="height: 20px; background-color: whitesmoke; padding: 1px;">
+                                        {{ $ticket->ticket_code }}
+                                    </div>
+                                    <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4" style="height: 20px; background-color: whitesmoke; padding: 1px;">
+                                        バッジネーム
+                                    </div>
+                                    <div class="col-12 col-sm-12 col-md-4 col-lg-8 col-xl-8 col-xxl-8" style="height: 20px; background-color: whitesmoke; padding: 1px;">
+                                        {{ $ticket->badge_name }}
+                                    </div>
+                                    <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4" style="height: 20px; background-color: whitesmoke; padding: 1px;">
+                                        本名
+                                    </div>
+                                    <div class="col-12 col-sm-12 col-md-4 col-lg-8 col-xl-8 col-xxl-8" style="height: 20px; background-color: whitesmoke; padding: 1px;">
+                                        {{ $ticket->family_name }} {{ $ticket->first_name }}
+                                    </div>
+                                    <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4" style="height: 20px; background-color: whitesmoke; padding: 1px;">
+                                        ステータス
+                                    </div>
+                                    <div class="col-12 col-sm-12 col-md-4 col-lg-8 col-xl-8 col-xxl-8" style="height: 20px; background-color: whitesmoke; padding: 1px;">
                                         <select name="status_id" id="status_id" onchange="update_status('{{ $ticket->hash }}')">
                                             @foreach ($statuses as $status)
                                             @if($status->id == $ticket->status_id)
@@ -29,12 +50,26 @@
                                             @endif
                                             @endforeach
                                         </select>
-                                        <br>
-                                    住所：〒{{ $ticket->post_code }}<br>
-                                    　　　{{ $ticket->pref[0]->pref }}{{ $ticket->address }}{{ $ticket->building_name }}{{ $ticket->room_number }}<br>
-                                    電話番号：{{ $ticket->phone_number }}<br>
-                                    携帯番号：{{ $ticket->mpbile_number }}<br>
-                                    @csrf
+                                    </div>
+                                    <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4" style="height: 20px; background-color: whitesmoke; padding: 1px;">
+                                        住所
+                                    </div>
+                                    <div class="col-12 col-sm-12 col-md-4 col-lg-8 col-xl-8 col-xxl-8" style="height: 20px; background-color: whitesmoke; padding: 1px;">
+                                        〒{{ $ticket->post_code }}<br>
+                                        　　　{{ $ticket->pref[0]->pref }}{{ $ticket->address }}{{ $ticket->building_name }}{{ $ticket->room_number }}<br>
+                                    </div>
+                                    <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4" style="height: 20px; background-color: whitesmoke; padding: 1px;">
+                                        電話番号
+                                    </div>
+                                    <div class="col-12 col-sm-12 col-md-4 col-lg-8 col-xl-8 col-xxl-8" style="height: 20px; background-color: whitesmoke; padding: 1px;">
+                                        {{ $ticket->phone_number }}
+                                    </div>
+                                    <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4" style="height: 20px; background-color: whitesmoke; padding: 1px;">
+                                        携帯番号
+                                    </div>
+                                    <div class="col-12 col-sm-12 col-md-4 col-lg-8 col-xl-8 col-xxl-8" style="height: 20px; background-color: whitesmoke; padding: 1px;">
+                                        {{ $ticket->mpbile_number }}
+                                    </div>
                                 </div>
                             </div>
                         </div>
