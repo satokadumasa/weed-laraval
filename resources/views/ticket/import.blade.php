@@ -2,7 +2,7 @@
 @section('content')
             <main style="padding: 56px 0px 36px;">
                 <h2>TICKET DATA IMPORT</h2>
-                <form action="{{ config("app.url") }}/ticket/store" method="post" enctype="multipart/form-data">
+                <form action="{{ config("app.url") }}/ticket/store_import" method="post" enctype="multipart/form-data">
                 @csrf
                 <div class="container">
                     <div class="row">

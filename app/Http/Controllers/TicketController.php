@@ -7,6 +7,7 @@ use App\Models\Ticket;
 use App\Models\Status;
 use App\Models\Pref;
 use App\Services\TicketService;
+use App\Services\CommontService;
 
 class TicketController extends Controller
 {
@@ -29,11 +30,63 @@ class TicketController extends Controller
                 $query = $query->where($key, '=', $value);
             }
         }
-        $tickets = $query->orderBy('id')->paginate(5)->fragment('tickets');
+        $tickets = $query->orderBy('id')->paginate(20)->fragment('tickets');
 
         return view('ticket.index', compact('tickets', 'statuses', 'prefs', 'params'));
     }
 
+    public function create()
+    {
+        \Log::debug("TicketController::create() START");
+        $statuses = Status::all();
+        $prefs = Pref::all();
+        return view('ticket.create', compact( 'statuses', 'prefs'));
+    }
+
+    public function store(Request $request)
+    {
+        \Log::debug("TicketController::store() START");
+        $params = $request->all();
+
+        $ticket_code = Ticket::where('id', '>', 0 )->max('ticket_code');
+        $ticket_code_prefix = substr($ticket_code, 0, 2);
+        $ticket_code_num = substr($ticket_code, 2, 5);
+        $ticket_code_num++;
+        $ticket_code = sprintf('%s%05d', $ticket_code_prefix, $ticket_code_num);
+
+        $hash = CommontService::createHash(32);
+        \Log::debug("TicketController::store() hash[{$hash}]");
+
+        DB::beginTransaction();
+        try {
+            $ticket = Ticket::create([
+                'hash'           => $hash,
+                'ticket_code'    => $ticket_code,
+                'badge_name'     => $params['badge_name'],
+                'first_name'     => $params['first_name'],
+                'family_name'    => $params['family_name'],
+                'status_id'      => $params['status_id'],
+                'age'            => $params['age'],
+                'gender'         => $params['gender'],
+                'email'          => $params['email'],
+                'post_code'      => $params['post_code'],
+                'pref_id'        => $params['pref_id'],
+                'address'        => $params['address'],
+                'building_name'  => $params['building_name'],
+                'room_number'    => $params['room_number'],
+                'phone_number'   => $params['phone_number'],
+                'mobile_number'  => $params['mobile_number'],
+                'description'    => isset($params['description']) ? $params['description'] : '',
+            ]);
+            $ticket->save();
+            DB::commit(); 
+            return redirect()->route('ticket.index');
+        } catch (\Throwable $th) {
+            \Log::debug("TicketController::store() Error:" . $th->getMessage());
+            DB::rollBack(); 
+            return redirect()->route('exceprion_error');
+        }
+    }
     public function show(string $hash)
     {
         \Log::debug("TicketController::show() ");
@@ -77,7 +130,7 @@ class TicketController extends Controller
         return view('ticket.import');
     }
 
-    public function store(Request $request)
+    public function store_import(Request $request)
     {
         \Log::debug("TicketController::store() START");
         TicketService::importTicketData($request);

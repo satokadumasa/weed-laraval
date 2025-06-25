@@ -20,14 +20,7 @@
                         <div class="offcanvas-body">
                             <ul class="navbar-nav">
                                 <li class="nav-item" style="padding: 2px;">
-                                    <a href="/dashboard" class="btn btn-primary">
-                                        {{ __('ダッシュボード') }}
-                                    </a>
-                                </li>
-                                <li class="nav-item" style="padding: 2px;">
-                                    <a href="/profile" class="btn btn-primary">
-                                        {{ __('プロファイル') }}
-                                    </a>
+                                    <a href="{{ config("app.url") }}/ticket/" class="btn btn-primary">TICKET LIST</a>
                                 </li>
                                 <li class="nav-item" style="padding: 2px;">
                                     @if(auth()->user())

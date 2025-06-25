@@ -97,7 +97,10 @@
                         <div class="col-12 col-sm-12 col-md-2 col-lg-2 col-xl-2 col-xxl-2">
                             <input type="submit" value="Search">
                         </div>
-                        <div class="col-12 col-sm-12 col-md-10 col-lg-10 col-xl-10 col-xxl-10">
+                        <div class="col-12 col-sm-12 col-md-5 col-lg-5 col-xl-5 col-xxl-5">
+                            <a href="{{ config("app.url") }}/ticket/create">CREATE</a>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-5 col-lg-5 col-xl-5 col-xxl-5">
                             <a href="{{ config("app.url") }}/ticket/import">IMPORT</a>
                         </div>
                     </div>
